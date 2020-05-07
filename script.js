@@ -18,6 +18,11 @@ function searchMeal(e) {
 
   // Check for empty --- 'trim' removes excess white space
   if (term.trim()) {
+    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${term}`)
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+      });
   } else {
     alert("Please enter a search term");
   }
