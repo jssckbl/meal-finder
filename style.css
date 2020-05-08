@@ -75,6 +75,25 @@ input[type="text"] {
   border-radius: 2px;
 }
 
+/* lays name of meal over image and adds a shadow */
+.meal-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease-in;
+  opacity: 0;
+}
+
+.meal:hover .meal-info {
+  opacity: 1;
+}
+
 /* make input box shrink if screen width is > 500px */
 @media (max-width: 800px) {
 }
