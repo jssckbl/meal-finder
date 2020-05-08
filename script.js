@@ -22,6 +22,7 @@ function searchMeal(e) {
       .then(res => res.json())
       .then(data => {
         console.log(data);
+        resultHeading.innerHTML = `<h2>Search results for '${term}':</h2>`;
       });
   } else {
     alert("Please enter a search term");
