@@ -27,16 +27,22 @@ function searchMeal(e) {
         if (data.meals === null) {
           resultHeading.innerHTML = `<p>There are no search results. Please try again.</p>`;
         } else {
-          mealsEl.innerHTML = data.meals.map(
-            meal => `
+          mealsEl.innerHTML = data.meals
+            .map(
+              meal => `
             <div class ="meal">
-            <img src ="${meal.strMealThumb}"  />
-            
+            <img src ="${meal.strMealThumb}" alt="${meal.strMeal}"  />
+            <div class ="meal-info" data-mealID="${meal.idMeal}">
+            <h3>${meal.strMeal}</h3>
+            </div>
             </div>
             `
-          );
+            )
+            .join("");
         }
       });
+    // Clear search text
+    search.value = "";
   } else {
     alert("Please enter a search term");
   }
