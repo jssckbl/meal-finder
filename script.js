@@ -66,7 +66,7 @@ function addMealToDOM(meal) {
   for (let i = 1; i <= 20; i++) {
     if (meal[`strIngredient${i}`]) {
       ingredients.push(
-        `${meal[`strIngredient${i}`]} '' ${meal[`strMeasure${i}`]}`
+        `${meal[`strIngredient${i}`]} --- ${meal[`strMeasure${i}`]}`
       );
     } else {
       break;
@@ -75,9 +75,22 @@ function addMealToDOM(meal) {
 
   single_mealEl.innerHTML = `
   <div class='single-meal'>
-  <h1>
-  ${meal.strMeal}
-  </h1>
+    <h1>${meal.strMeal}</h1>
+    <img src='${meal.strMealThumb}' alt='${meal.strMeal}'/>
+    <div class='single-meal-info'>
+        ${meal.strCategory ? `<p>${meal.strCategory}</p>` : ""}
+        ${meal.strArea ? `<p>${meal.strArea}</p>` : ""}
+
+        </div>
+
+        <div class = 'main'>
+            <p>${meal.strInstructions}</p>
+            <h2>Ingredients</h2>
+            <ul>
+                ${ingredients.map(ing => `<li>${ing} </li>`).join("")}
+
+            </ul>
+        </div>
   </div>
   `;
 }
