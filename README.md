@@ -8,24 +8,24 @@ JavaScript, CSS, and HTML are used for this project.
 
 Example when user searches using the term "cheese"
 
-![hangman game start](mealFinderCheese1.png)
+![meal finder search term cheese](mealFinderCheese1.png)
 
 ---
 
 From the list of meals, user clicked on "Honey Yogurt Cheesecake"
 
-![hangman game start](mealFinderCheese2.png)
+![meal finder cheese search meal results](mealFinderCheese2.png)
 
 ---
 
 If user would like a random meal, they click on the far right button of the input field
 
-![hangman game start](mealFinderRandom1.png)
+![meal finder random button option](mealFinderRandom1.png)
 
 ---
 
 Example of meal that appears after random meal button is clicked
 
-![hangman game start](mealFinderRandom2.png)
+![meal finder random button result](mealFinderRandom2.png)
 
 ---
