@@ -119,6 +119,23 @@ input[type="text"] {
   line-height: 1.5;
 }
 
+.single-meal ul {
+  padding: 0;
+  list-style: none;
+}
+
+.single-meal ul li {
+  border: 1px solid #ededed;
+  border-radius: 5px;
+  background-color: #fff;
+  display: inline-block;
+  color: #2d2013;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px;
+  margin: 0 5px 5px 0;
+}
+
 /* make input box shrink if screen width is > 500px */
 @media (max-width: 800px) {
 }
